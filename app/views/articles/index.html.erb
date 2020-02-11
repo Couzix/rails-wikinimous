@@ -1,0 +1,16 @@
+<div class="navbar">
+  <%= link_to '+ New article', new_article_path %>
+</div>
+
+<div class="container">
+  <ul>
+    <% @articles.each do |article| %>
+    <div class="article">
+      <li><%= link_to article.title, article_path(article)%></li>
+      <p><%= article.content %></p>
+    </div>
+    <% end %>
+  </ul>
+
+</div>
+
